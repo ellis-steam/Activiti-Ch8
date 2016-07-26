@@ -8,7 +8,15 @@
 	<name>BPMN 2.0 with Activiti - Examples</name>
 	<properties>
 		<activiti-version>5.18.0</activiti-version>
+		<restlet-version>2.3.7</restlet-version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>maven-restlet</id>
+			<name>Restlet repository</name>
+			<url>https://maven.restlet.com</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.activiti</groupId>
@@ -35,11 +43,11 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.6</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.slf4j</groupId> -->
-<!-- 			<artifactId>slf4j-jdk14</artifactId> -->
-<!-- 			<version>1.7.6</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.slf4j</groupId> -->
+		<!-- <artifactId>slf4j-jdk14</artifactId> -->
+		<!-- <version>1.7.6</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -66,10 +74,35 @@
 			<version>1.7.6</version>
 		</dependency>
 		<dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.16</version>
-    </dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.restlet.jse</groupId> -->
+<!-- 			<artifactId>org.restlet</artifactId> -->
+<!-- 			<version>${restlet-version}</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.restlet.jse</groupId> -->
+<!-- 			<artifactId>org.restlet.ext.jackson</artifactId> -->
+<!-- 			<version>${restlet-version}</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.restlet.jee</groupId> -->
+<!-- 			<artifactId>org.restlet.ext.servlet</artifactId> -->
+<!-- 			<version>2.0.1</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.restlet.jee</groupId> -->
+<!-- 			<artifactId>org.restlet.ext.spring</artifactId> -->
+<!-- 			<version>2.0.1</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.39</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
