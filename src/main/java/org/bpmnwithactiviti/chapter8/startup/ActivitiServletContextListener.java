@@ -3,18 +3,29 @@ package org.bpmnwithactiviti.chapter8.startup;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-public class ActivitiServletContextListener implements ServletContextListener{
+import org.activiti.engine.ProcessEngine;
+import org.activiti.engine.ProcessEngines;
+import org.apache.log4j.Logger;
 
+
+public class ActivitiServletContextListener implements ServletContextListener{
+	
+	private static final Logger logger = Logger.getLogger(ActivitiServletContextListener.class);
+	
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
+		ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
+		
+		if(processEngine == null) {
+			logger.error("Could not start the Activiti Engine");
+		}
+	}
+
+	
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void contextInitialized(ServletContextEvent sce) {
-		// TODO Auto-generated method stub
-		
+		ProcessEngines.destroy();
 	}
 
 }
